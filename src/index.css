@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Hind Siliguri", sans-serif;
+  --color-background: #0f172a;
+  --color-card: #1e293b;
+  --color-accent: #10b981; /* emerald-500 */
+}
+
+/* Force 'Hind Siliguri' font on everything across all devices */
+html, body, #root, *, button, input, select, textarea {
+  font-family: "Hind Siliguri", sans-serif !important;
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling on mobile */
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-background);
+  color: #e2e8f0; /* gray-200 */
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
