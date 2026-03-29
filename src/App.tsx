@@ -23,7 +23,7 @@ export default function App() {
                 ২০২৬-হিসাব নোট আপনার প্রতিষ্ঠানের সমস্ত হিসাবের সঙ্গী-
               </p>
               <p className="text-[11px] uppercase tracking-[0.15em] font-black bg-gradient-to-r from-slate-200 to-slate-400 bg-clip-text text-transparent">
-                মোঃ অনিকুর রহমান রাতুল,ফ্রন্ট-এন্ড ডেভেলপার 
+                মোঃ অনিকুর রহমান রাতুল,ফ্রন্ট-এন্ড ডেভেলপার
               </p>
             </div>
           </footer>
