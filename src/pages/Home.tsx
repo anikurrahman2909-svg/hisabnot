@@ -157,7 +157,7 @@ export default function Home() {
         <div className="h-px flex-1 bg-slate-800/50 ml-4" />
       </div>
 
-      <main className="flex flex-col gap-4 px-6 mt-6">
+      <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredCustomers.length > 0 ? (
           filteredCustomers.map((customer) => (
             <motion.div

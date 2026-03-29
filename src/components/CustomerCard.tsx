@@ -32,7 +32,7 @@ export default function CustomerCard({
             </div>
           </div>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 shrink-0 ml-2">
           <div className="text-right">
             <p className="text-[10px] font-black uppercase tracking-wider bg-linear-to-r from-rose-400 to-orange-400 bg-clip-text text-transparent">
               মোট বাকি
