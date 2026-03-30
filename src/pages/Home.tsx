@@ -67,14 +67,16 @@ export default function Home() {
 
   return (
     <div className="flex flex-col h-screen overflow-hidden bg-slate-950">
-      <header className="flex flex-col p-6 pt-3 pb-2 relative overflow-hidden rounded-b-2xl shadow-2xl shadow-slate-950/50">
+      <header className="sticky top-0 z-50 shrink-0 w-full bg-state-950/80
+       backdrop-blur-md border-b border-white/5"> 
+      
         {/* Decorative Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full bg-slate-900 z-0" />
         <div className="absolute -top-24 -right-24 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl z-0" />
         <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl z-0" />
         
         <div className="relative z-10 flex items-center justify-between">
-          <div className="flex items-center gap-3">
+          <div className="flex flex-col gap-6 p-6">
             <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-linear-to-br from-emerald-400 to-cyan-500 text-white shadow-lg shadow-emerald-500/20">
               <BookOpen size={24} strokeWidth={2.5} />
             </div>
@@ -157,7 +159,7 @@ export default function Home() {
         <div className="h-px flex-1 bg-slate-800/50 ml-4" />
       </div>
 
-      <main className="flex-1 overflow-y-auto px-4 pb-32 custom scrollbar">
+      <main className="flex-1 overflow-y-auto px-4 pb-40 custom-scrollbar relative z-10">
         {filteredCustomers.length > 0 ? (
           filteredCustomers.map((customer) => (
             <motion.div
