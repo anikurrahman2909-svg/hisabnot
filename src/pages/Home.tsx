@@ -66,7 +66,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col gap-6 pb-24">
+    <div className="flex flex-col h-screen overflow-hidden bg-slate-950">
       <header className="flex flex-col p-6 pt-3 pb-2 relative overflow-hidden rounded-b-2xl shadow-2xl shadow-slate-950/50">
         {/* Decorative Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full bg-slate-900 z-0" />
@@ -157,13 +157,15 @@ export default function Home() {
         <div className="h-px flex-1 bg-slate-800/50 ml-4" />
       </div>
 
-      <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <main className="flex-1 overflow-y-auto px-4 pb-32 custom scrollbar">
         {filteredCustomers.length > 0 ? (
           filteredCustomers.map((customer) => (
             <motion.div
               key={customer.id}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{duration: 0.2}}
+              style={{transform:'translateZ(0)'}}
             >
               <CustomerCard 
                 customer={customer} 
