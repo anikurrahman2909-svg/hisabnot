@@ -159,7 +159,7 @@ export default function Home() {
         <div className="h-px flex-1 bg-slate-800/50 ml-4" />
       </div>
 
-      <main className="flex-1 overflow-y-auto px-4 pb-40 custom-scrollbar relative z-10">
+      <main className="flex-1 overflow-y-auto px-4 pb-32 custom-scrollbar relative z-10">
         {filteredCustomers.length > 0 ? (
           filteredCustomers.map((customer) => (
             <motion.div

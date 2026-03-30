@@ -17,7 +17,7 @@ export default function App() {
             <Route path="/customer/:id" element={<CustomerDetails />} />
           </Routes>
           
-          <footer className="mt-16 pb-16 text-center border-t border-slate-800/50 pt-10">
+          <footer className="flex-none bg-[#0a192f] p-4 text-center">
             <div className="flex flex-col gap-3">
               <p className="text-lg font-black leading-tight bg-gradient-to-r from-emerald-300 via-emerald-400 to-cyan-300 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(52,211,153,0.3)]">
                 ২০২৬-[হিসাব নোট] আপনার প্রতিষ্ঠানের হিসাবের সঙ্গী-
