@@ -15,33 +15,35 @@ export default function CustomerCard({
   const balance = getCustomerBalance(customer.id);
 
   return (
-    <div className="group relative w-full mb-4">
+    <div className="group relative">
       <Link
         to={`/customer/${customer.id}`}
-        className="flex items-center justify-between rounded-xl bg-card p-4 shadow-lg shadow-slate-950/40 transition-all hover:scale-[1.01] active:scale-[0.98] border border-slate-700/50 pr-12"
+        className="flex items-center justify-between rounded-xl bg-card p-4 shadow-lg shadow-slate-950/40 transition-all hover:scale-[1.01] active:scale-[0.98] border border-slate-700/50 pr-12 min-h-[80px]"
       >
-        <div className="flex items-center gap-4">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-slate-700 text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
-            <User size={24} />
+        <div className="flex items-center gap-3 min-w-0 flex-1">
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-slate-700 
+          text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+            <User size={22} />
           </div>
-          <div>
-            <h3 className="font-semibold text-white">{customer.name}</h3>
-            <div className="flex items-center gap-1 text-sm font-medium text-emerald-400/80">
-              <Phone size={12} className="text-emerald-500" />
-              <span>{customer.phone}</span>
+          <div className="min-w-0 flex-1">
+            <h3 className="font-bold text-white truncate text-sm sm:text-base">{customer.name}</h3>
+            <div className="flex items-center gap-1 text-[11px] sm:text-xs font-medium text-emerald-400/80">
+              <Phone size={10} className="text-emerald-500" />
+              <span className="truncate">{customer.phone}</span>
             </div>
           </div>
         </div>
+        
         <div className="flex items-center gap-2 shrink-0 ml-2">
           <div className="text-right">
-            <p className="text-[10px] font-black uppercase tracking-wider bg-linear-to-r from-rose-400 to-orange-400 bg-clip-text text-transparent">
-              মোট বাকি
+            <p className="text-[9px] font-black uppercase tracking-wider bg-linear-to-r from-rose-400 to-orange-400 bg-clip-text text-transparent">
+              বাকি
             </p>
-            <p className={`font-bold ${balance > 0 ? 'text-rose-400' : balance < 0 ? 'text-emerald-400' : 'text-slate-300'}`}>
-              ৳ {Math.abs(balance).toLocaleString('bn-BD')}
+            <p className={`text-sm sm:text-base font-bold ${balance > 0 ? 'text-rose-400' : balance < 0 ? 'text-emerald-400' : 'text-slate-300'}`}>
+              ৳{Math.abs(balance).toLocaleString('bn-BD')}
             </p>
           </div>
-          <ChevronRight size={20} className="text-slate-600" />
+          <ChevronRight size={16} className="text-slate-600 shrink-0" />
         </div>
       </Link>
       
